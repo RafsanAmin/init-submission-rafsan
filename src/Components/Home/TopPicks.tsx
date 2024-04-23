@@ -16,13 +16,9 @@ const TopPicks = ({ latest }: { latest?: boolean }) => {
         Top <span className="text-secondary">{latest ? 'Latest' : 'Trendings'}</span>
       </h2>
       <section className="mt-8 flex flex-wrap justify-center grid-fluid-fill-[290px] sm:grid-fluid-fill-[350px] gap-5">
-        <NFTCard />
-        <NFTCard />
-        <NFTCard />
-        <NFTCard />
-        <NFTCard />
-        <NFTCard />
-        <NFTCard />
+        {[...new Array(7)].map((s, i) => {
+          return <NFTCard index={latest ? 16 - i : i} key={i} />;
+        })}
       </section>
     </section>
   );

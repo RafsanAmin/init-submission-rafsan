@@ -9,11 +9,11 @@ import { CiSearch } from 'react-icons/ci';
 const Navbar = () => {
   const [showOptions, setShowOptions] = useState<boolean>(false);
   return (
-    <nav className="py-6 w-screen  fixed top-0 mx-auto  bg-primary_darkest z-10">
+    <nav className="py-6 w-screen  fixed top-0 mx-auto  bg-primary_darkest z-40">
       <div className="container flex justify-between items-center">
-        <div>
+        <Link href="/">
           <Image className="w-[100px]" width={100} height={70} src="/logo.svg" alt="logo" />
-        </div>
+        </Link>
         <div>
           <button
             onClick={() => setShowOptions(!showOptions)}
@@ -71,7 +71,7 @@ const Navbar = () => {
               <Link
                 className="flex gap-2 items-center"
                 onClick={() => setShowOptions(false)}
-                href="/login"
+                href="/marketplace"
               >
                 <CiSearch />
                 Search

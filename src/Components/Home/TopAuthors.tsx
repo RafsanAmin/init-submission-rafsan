@@ -11,9 +11,9 @@ const TopAuthors = () => {
         <span className="text-secondary">Authors</span>
       </h2>
       <section className="mt-8 flex flex-wrap justify-center grid-fluid-fit-[220px] gap-5">
-        <AuthorCard />
-        <AuthorCard />
-        <AuthorCard />
+        {[...new Array(4)].map((s, i) => {
+          return <AuthorCard index={i} key={i} />;
+        })}
       </section>
     </section>
   );
