@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { PiPause, PiPlay } from 'react-icons/pi';
 import tracks from '@/db/tracks';
 import WavesurferPlayer, { useWavesurfer } from '@wavesurfer/react';
+import { CgSpinnerTwo } from 'react-icons/cg';
 
 const AudioPlayer = ({ index }: { index: number }) => {
   const [playing, setPlaying] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   const [time, setTime] = useState<{ min: string; sec: string }>({ min: '00', sec: '00' });
   const [ws, setWs] = useState<any>();
   const trackData = tracks[index];
@@ -18,6 +20,7 @@ const AudioPlayer = ({ index }: { index: number }) => {
   const onReady = (wsa: any) => {
     setWs(wsa);
     setPlaying(false);
+    setLoading(false);
   };
 
   const PlayNPause = () => {
@@ -34,12 +37,18 @@ const AudioPlayer = ({ index }: { index: number }) => {
       >
         {!playing ? <PiPlay /> : <PiPause />}
       </button>
-      <div className="flex-1 cursor-pointer h-16">
+      <div className="flex-1 cursor-pointer h-16 relative">
+        <div className="absolute top-1/2 left-1/2 z-20  -translate-x-1/2 pointer-events-none -translate-y-1/2 inset-0 h-full w-full grid place-items-center">
+          {loading ? (
+            <CgSpinnerTwo className="origin-center  text-secondary   w-12 h-12 animate-spin"></CgSpinnerTwo>
+          ) : null}
+        </div>
         <WavesurferPlayer
           height={64}
           barGap={3}
           barWidth={2}
           dragToSeek
+          onLoad={() => setLoading(false)}
           onReady={onReady}
           progressColor={'#F7F6BB'}
           url={trackData.trackUrl}
