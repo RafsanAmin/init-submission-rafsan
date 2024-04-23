@@ -5,6 +5,8 @@
 html {
   font-family: Montserrat;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 h1,

@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { RxCross2 } from 'react-icons/rx';
 import { CiSearch } from 'react-icons/ci';
+import { MdOutlineTravelExplore } from 'react-icons/md';
 
 const Navbar = () => {
   const [showOptions, setShowOptions] = useState<boolean>(false);
@@ -46,35 +47,35 @@ const Navbar = () => {
           </button>
           <ul
             className={
-              'flex flex-col pt-8 lg:pt-0 lg:flex-row z-40 text-[#ffffffc7]  Inter gap-x-16 gap-y-8  items-center font-light bg-primary_dark lg:bg-transparent h-screen w-screen lg:h-auto lg:w-auto fixed top-[88px] left-0 lg:relative lg:top-0 transition ' +
+              'flex flex-col pt-0 lg:pt-0 lg:flex-row z-40 text-[#ffffffc7]  Inter lg:gap-x-16 gap-y-1  items-center font-light bg-primary_darkest lg:bg-transparent h-screen w-screen lg:h-auto lg:w-auto fixed top-[88px] left-0 lg:relative lg:top-0 transition ' +
               (showOptions
-                ? 'translate-x-0 p-5 lg:p-0'
+                ? 'translate-x-0  lg:p-0'
                 : '-translate-x-[150vw] lg:translate-x-0 pointer-events-none lg:pointer-events-auto')
             }
           >
-            <li className="hover:text-secondary_light l:w-auto w-full text-center bg-primary lg:bg-transparent ">
+            <li className="hover:text-secondary_light l:w-auto w-full text-center bg-primary_dark py-3  -ml-1  lg:bg-transparent ">
               <Link onClick={() => setShowOptions(false)} href="/">
                 Home
               </Link>
             </li>
-            <li className="hover:text-secondary_light  l:w-auto w-full text-center bg-primary lg:bg-transparent">
+            <li className="hover:text-secondary_light  l:w-auto w-full text-center bg-primary_dark  py-3  -ml-1 lg:bg-transparent">
               <Link onClick={() => setShowOptions(false)} href="/#about">
                 About
               </Link>
             </li>
-            <li className="hover:text-secondary_light  l:w-auto w-full text-center bg-primary lg:bg-transparent">
+            <li className="hover:text-secondary_light  l:w-auto w-full text-center bg-primary_dark  py-3  -ml-1 lg:bg-transparent">
               <Link onClick={() => setShowOptions(false)} href="/publish">
                 Publish
               </Link>
             </li>
-            <li className=" bg-secondary hover:bg-terenary px-8 py-2 text-primary_dark  font-medium  l:w-auto w-full text-center">
+            <li className=" bg-secondary justify-center hover:bg-terenary px-8 py-3 lg:py-2 text-primary_dark -ml-1   font-medium  l:w-auto w-full text-center">
               <Link
-                className="flex gap-2 items-center"
+                className="flex gap-2 items-center justify-center"
                 onClick={() => setShowOptions(false)}
                 href="/marketplace"
               >
-                <CiSearch />
-                Search
+                <MdOutlineTravelExplore />
+                Explore
               </Link>
             </li>
           </ul>

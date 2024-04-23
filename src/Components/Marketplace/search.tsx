@@ -14,7 +14,7 @@ const Search = ({
     <section className="flex flex-col gap-5 mb-8">
       {' '}
       <div>
-        <h1 className="text-3xl md:text-4xl md:text-5xl font-bold  text-white">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold  text-white">
           Search <span className="text-secondary">Music</span>{' '}
           <span className="text-primary">NFTs</span>
         </h1>
@@ -25,7 +25,7 @@ const Search = ({
           onChange={(e) => setQuery((s: any) => ({ ...s, query: e.target.value }))}
           type="test"
           className=" bg-primary_dark px-5  py-4 text-secondary flex-1 shrink min-w-0  placeholder:text-primary"
-          placeholder="Find your desired Music NFTs"
+          placeholder="Search by Name or Author"
         />
         <div className="flex gap-4 grow-0 md:max-w-[280px] xl:max-w-[350px] md:basis-[250px]">
           <input
