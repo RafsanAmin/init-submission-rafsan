@@ -203,7 +203,6 @@ const tracks: track[] = [
 export const searchTracks = ({ name, min, max }: { name: string; min: number; max: number }) => {
   const indexes: number[] = [];
   tracks.forEach((s, i) => {
-    console.log(s.name);
     if (
       (s.name.toLowerCase().includes(name.toLowerCase()) ||
         s.author.name.toLowerCase().includes(name.toLowerCase())) &&

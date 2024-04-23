@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const NFTCard = ({ index }: { index: number }) => {
-  console.log(tracks[index]);
   return (
     <>
       {tracks[index] ? (

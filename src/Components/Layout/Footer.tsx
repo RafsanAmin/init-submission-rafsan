@@ -9,13 +9,19 @@ const Footer = () => {
       <div className="container py-12 flex flex-col gap-6 md:flex-row md:justify-between items-center">
         <Image className="w-[100px]" width={100} height={70} src="/logo.svg" alt="logo" />
         <div className="text-[#ffffff6b] flex gap-4 text-2xl ">
-          <Link className="hover:text-[#ffffff98]" href="#">
+          <Link
+            className="hover:text-[#ffffff98]"
+            href="https://www.facebook.com/profile.php?id=100082305411559"
+          >
             <FaFacebook />
           </Link>
-          <Link className="hover:text-[#ffffff98]" href="#">
+          <Link
+            className="hover:text-[#ffffff98]"
+            href="https://github.com/RafsanAmin/init-submission-rafsan"
+          >
             <FaGithub />
           </Link>
-          <Link className="hover:text-[#ffffff98]" href="#">
+          <Link className="hover:text-[#ffffff98]" href="https://musi-nft.vercel.app/">
             <FaGlobe />
           </Link>
         </div>
