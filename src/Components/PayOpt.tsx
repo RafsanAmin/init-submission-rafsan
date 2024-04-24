@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const PayOpt = ({ trackData }: { trackData: any }) => {
@@ -14,7 +15,7 @@ const PayOpt = ({ trackData }: { trackData: any }) => {
             selectPay === 0 ? 'bg-primary' : ''
           } text-secondary flex-1 text-2xl flex gap-3 py-2 pl-3 pr-5 items-center leading-none transition-all cursor-pointer`}
         >
-          <img className="w-10" src="/cryptos/bitcoin.png" alt="" />
+          <Image width={40} height={40} className="w-10" src="/cryptos/bitcoin.png" alt="" />
           <p className="flex flex-col items-start">
             <span className="text-white text-sm block">Bitcoin</span>
             <span className="block font-Lexend">{trackData.bitcoin}</span>
@@ -27,7 +28,7 @@ const PayOpt = ({ trackData }: { trackData: any }) => {
             selectPay === 1 ? 'bg-primary' : ''
           } text-secondary flex-1 text-2xl flex gap-3 py-2 pl-3 pr-5 items-center leading-none transition-all cursor-pointer`}
         >
-          <img className="w-10" src="/cryptos/ethereum.png" alt="" />
+          <Image width={40} height={40} className="w-10" src="/cryptos/ethereum.png" alt="" />
           <p className="flex flex-col items-start">
             <span className="text-white text-sm block">Ethereum</span>
             <span className="block font-Lexend">{trackData.etherium}</span>
@@ -40,7 +41,7 @@ const PayOpt = ({ trackData }: { trackData: any }) => {
             selectPay === 2 ? 'bg-primary' : ''
           } text-secondary flex-1 text-2xl flex gap-3 py-2 pl-3 pr-5 items-center leading-none transition-all cursor-pointer`}
         >
-          <img className="w-10" src="/cryptos/dogecoin.png" alt="" />
+          <Image width={40} height={40} className="w-10" src="/cryptos/dogecoin.png" alt="" />
           <p className="flex flex-col items-start">
             <span className="text-white text-sm block">Doge Coin</span>
             <span className="block font-Lexend">{trackData.dogecoin}</span>

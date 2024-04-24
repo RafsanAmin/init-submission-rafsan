@@ -3,6 +3,7 @@ import AudioPlayer from '@/Components/AudioPlayer';
 import PayOpt from '@/Components/PayOpt';
 import authors from '@/db/authors';
 import tracks from '@/db/tracks';
+import Image from 'next/image';
 import Link from 'next/link';
 import { BiDownload } from 'react-icons/bi';
 
@@ -12,10 +13,13 @@ const Page = ({ params }: { params: { index: number } }) => {
   return (
     <div className="mt-[88px] py-8 md:py-32 bg-cover min-h-[calc(100vh_-_88px)] grid place-items-center   w-screen overflow-hidden  bg-center bg-no-repeat relative">
       <div className="z-10 relative container flex flex-col lg:items-center lg:flex-row gap-8">
-        <img
+        <Image
+          width={550}
+          height={400}
           src={trackData.thumbUrl}
           className="w-full max-w-[450px] xl:max-w-[550px] shadow-lg aspect-square object-cover mx-auto"
-        ></img>
+          alt=""
+        ></Image>
         <div className="flex-1 w-full mb-8">
           <div className="flex  flex-col md:flex-row gap-2 md:gap-5 justify-between items-start md:items-center">
             <div>
@@ -27,9 +31,12 @@ const Page = ({ params }: { params: { index: number } }) => {
                 }}
                 className="text-secondary text-xl mt-4 flex gap-2 items-center hover:underline underline-offset-2"
               >
-                <img
+                <Image
+                  width={40}
+                  height={40}
                   src={`/authors/${authors[trackData.author.id].name}.jpg`}
                   className="w-10 h-10 border-2 border-primary rounded-full"
+                  alt=""
                 />
                 {trackData.author.name}
               </Link>
@@ -49,10 +56,13 @@ const Page = ({ params }: { params: { index: number } }) => {
           </div>
         </div>
       </div>
-      <img
+      <Image
+        alt=""
+        width={1920}
+        height={1080}
         src={trackData.thumbUrl}
         className="absolute w-full min-h-[60vh]  inset-0 blur-lg brightness-50 z-0"
-      ></img>
+      ></Image>
     </div>
   );
 };

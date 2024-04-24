@@ -93,15 +93,15 @@ const About = () => {
           </h2>
           <section className="flex gap-4 sm:gap-12    text-[#ffffffcb] sm:text-xl font-Lexend">
             <div className="flex flex-col items-center gap-2">
-              <img className="w-24" src="/cryptos/bitcoin.png" alt="" />
+              <Image width={96} height={96} className="w-24" src="/cryptos/bitcoin.png" alt="" />
               <p>Bitcoin</p>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <img className="w-24" src="/cryptos/ethereum.png" alt="" />
+              <Image width={96} height={96} className="w-24" src="/cryptos/ethereum.png" alt="" />
               <p>Etherium</p>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <img className="w-24" src="/cryptos/dogecoin.png" alt="" />
+              <Image width={96} height={96} className="w-24" src="/cryptos/dogecoin.png" alt="" />
               <p>Doge Coin</p>
             </div>
           </section>
