@@ -68,7 +68,7 @@ const Navbar = () => {
             </li>
             <li className="hover:text-secondary_light   l:w-auto w-full text-center bg-primary_dark  py-3  -ml-1 lg:bg-transparent">
               <a
-                className="flex gap-2 items-center cursor-pointer"
+                className="flex gap-2 items-center cursor-pointer justify-center"
                 onClick={() => {
                   setShowOptions(false);
                   Router.push(`/nft/${Math.floor(Math.random() * 17)}`);
