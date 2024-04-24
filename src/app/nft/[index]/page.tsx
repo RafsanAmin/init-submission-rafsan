@@ -1,14 +1,16 @@
-'use client';
 import AudioPlayer from '@/Components/AudioPlayer';
+import PayOpt from '@/Components/PayOpt';
 import authors from '@/db/authors';
 import tracks from '@/db/tracks';
 import Link from 'next/link';
-import { useState } from 'react';
 import { BiDownload } from 'react-icons/bi';
+
+export async function generateStaticParams() {
+  return [...new Array(17)].map((s, index) => index);
+}
 
 const Page = ({ params }: { params: { index: number } }) => {
   const trackData = tracks[params.index];
-  const [selectPay, setSelectPay] = useState(0);
 
   return (
     <div className="mt-[88px] py-8 md:py-32 bg-cover min-h-[calc(100vh_-_88px)] grid place-items-center   w-screen overflow-hidden  bg-center bg-no-repeat relative">
@@ -43,49 +45,7 @@ const Page = ({ params }: { params: { index: number } }) => {
           <h3 className="text-white text-2xl mb-6 ">
             Buy <span className="text-secondary">Options</span>
           </h3>
-          <div className="flex justify-between flex-col md:flex-row gap-4 items-stretch lg:flex-col 2xl:flex-row mb-4 md:pb-2 p-2 bg-[#1142327c]">
-            <div className="flex flex-col sm:flex-row  w-full ">
-              <button
-                onClick={() => setSelectPay(0)}
-                type={'button'}
-                className={`${
-                  selectPay === 0 ? 'bg-primary' : ''
-                } text-secondary flex-1 text-2xl flex gap-3 py-2 pl-3 pr-5 items-center leading-none transition-all cursor-pointer`}
-              >
-                <img className="w-10" src="/cryptos/bitcoin.png" alt="" />
-                <p className="flex flex-col items-start">
-                  <span className="text-white text-sm block">Bitcoin</span>
-                  <span className="block font-Lexend">{trackData.bitcoin}</span>
-                </p>
-              </button>
-              <button
-                onClick={() => setSelectPay(1)}
-                type={'button'}
-                className={`${
-                  selectPay === 1 ? 'bg-primary' : ''
-                } text-secondary flex-1 text-2xl flex gap-3 py-2 pl-3 pr-5 items-center leading-none transition-all cursor-pointer`}
-              >
-                <img className="w-10" src="/cryptos/ethereum.png" alt="" />
-                <p className="flex flex-col items-start">
-                  <span className="text-white text-sm block">Ethereum</span>
-                  <span className="block font-Lexend">{trackData.etherium}</span>
-                </p>
-              </button>
-              <button
-                onClick={() => setSelectPay(2)}
-                type={'button'}
-                className={`${
-                  selectPay === 2 ? 'bg-primary' : ''
-                } text-secondary flex-1 text-2xl flex gap-3 py-2 pl-3 pr-5 items-center leading-none transition-all cursor-pointer`}
-              >
-                <img className="w-10" src="/cryptos/dogecoin.png" alt="" />
-                <p className="flex flex-col items-start">
-                  <span className="text-white text-sm block">Doge Coin</span>
-                  <span className="block font-Lexend">{trackData.dogecoin}</span>
-                </p>
-              </button>
-            </div>
-          </div>
+          <PayOpt trackData={trackData} />
           <div className="flex">
             <button className="btn-prim px-6 py-3 flex-1">Buy</button>
             <button className="btn-sec px-6 py-3  flex-1">Offer</button>

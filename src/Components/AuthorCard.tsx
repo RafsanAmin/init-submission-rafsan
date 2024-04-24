@@ -12,17 +12,17 @@ const AuthorCard = ({ index }: { index: number }) => {
   return (
     <Link
       href={{ pathname: '/marketplace', query: { query: authorData.name } }}
-      className="bg-primary_dark block  text-white border border-transparent  hover:border-primary cursor-pointer "
+      className="bg-primary_dark block relative overflow-hidden  text-white border border-transparent group  hover:border-primary cursor-pointer "
     >
       <div className="flex flex-col justify-center gap-2 items-center">
         <Image
           height={180}
           width={180}
           src={'/authors/' + authorData.name + '.jpg'}
-          className="w-full h-48 aspect-square object-cover"
+          className="w-full h-48 aspect-square object-cover transition-all  absolute top-0 group-hover:h-[268px] group-hover:blur-sm group-hover:brightness-50"
           alt=""
         ></Image>
-        <div className="flex flex-col justify-center flex-1 w-full text-start ml-8 pt-2 pb-3">
+        <div className="flex flex-col justify-center flex-1 w-full text-start ml-8 pt-2 transition-all mt-[192px] z-10  pb-3">
           <h3 className="font-medium text-2xl text-secondary">{authorData.name}</h3>
           <div className="text-[#ffffff9c] text flex gap-4">
             <p>

@@ -15,7 +15,9 @@ const Hero = () => {
           Discover <span className="text-secondary">Music</span>{' '}
           <span className="text-primary">NFTs</span>
         </h1>
-        <p className="text-gray-200 md:text-lg mt-5">Enjoy Music like never before</p>
+        <p className="text-gray-200 md:text-lg mt-5  animate-pulse">
+          Enjoy Music like never before
+        </p>
       </div>
       <div className="flex gap-4 justify-center items-stretch w-[90%]">
         <input

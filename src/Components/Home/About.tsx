@@ -44,7 +44,7 @@ const About = () => {
                 </div>
               </div>
               <div className="md:h-auto h-32 text-terenary md:flex-1 flex flex-col justify-center items-center bg-secondary_light">
-                <span className="text-4xl">1500+</span>
+                <span className="text-4xl">250k+</span>
                 <span>
                   <TbCurrencyBitcoin className="inline mr-1" />
                   Transactions
@@ -84,25 +84,27 @@ const About = () => {
           </p>
         </section>
       </section>
-      <section className="py-16 flex flex-col gap-8 md:flex-row  md:justify-between container items-center">
-        <h2 className="text-3xl text-center md:text-left md:text-4xl text-white">
-          {/* <LuMusic2 className="text-primary inline mr-1" /> Music{' '} */}
-          Supported <br></br>
-          <span className="text-secondary">Cryptos</span>
-        </h2>
-        <section className="flex gap-4 sm:gap-12    text-[#ffffffcb] sm:text-xl font-Lexend">
-          <div className="flex flex-col items-center gap-2">
-            <img className="w-24" src="/cryptos/bitcoin.png" alt="" />
-            <p>Bitcoin</p>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <img className="w-24" src="/cryptos/ethereum.png" alt="" />
-            <p>Etherium</p>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <img className="w-24" src="/cryptos/dogecoin.png" alt="" />
-            <p>Doge Coin</p>
-          </div>
+      <section className="w-screen bg-primary_darkest circuit">
+        <section className="py-16 flex flex-col gap-8 md:flex-row mx-auto  md:justify-between container items-center">
+          <h2 className="text-3xl text-center md:text-left md:text-4xl text-white">
+            {/* <LuMusic2 className="text-primary inline mr-1" /> Music{' '} */}
+            Supported <br></br>
+            <span className="text-secondary">Cryptos</span>
+          </h2>
+          <section className="flex gap-4 sm:gap-12    text-[#ffffffcb] sm:text-xl font-Lexend">
+            <div className="flex flex-col items-center gap-2">
+              <img className="w-24" src="/cryptos/bitcoin.png" alt="" />
+              <p>Bitcoin</p>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <img className="w-24" src="/cryptos/ethereum.png" alt="" />
+              <p>Etherium</p>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <img className="w-24" src="/cryptos/dogecoin.png" alt="" />
+              <p>Doge Coin</p>
+            </div>
+          </section>
         </section>
       </section>
     </>

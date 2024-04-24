@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import { PiPause, PiPlay } from 'react-icons/pi';
 import tracks from '@/db/tracks';

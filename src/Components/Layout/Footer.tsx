@@ -21,7 +21,7 @@ const Footer = () => {
           >
             <FaGithub />
           </Link>
-          <Link className="hover:text-[#ffffff98]" href="https://musi-nft.vercel.app/">
+          <Link className="hover:text-[#ffffff98]" href="https://rafsanamin.epizy.com/">
             <FaGlobe />
           </Link>
         </div>

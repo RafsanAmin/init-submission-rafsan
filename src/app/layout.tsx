@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter, Lexend, Montserrat, Open_Sans, Sedan, Share_Tech_Mono } from 'next/font/google';
+import { Lexend, Montserrat } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/Components/Layout/Navbar';
 import Footer from '@/Components/Layout/Footer';
 import NextTopLoader from 'nextjs-toploader';
 import { Suspense } from 'react';
 
-const inter = Inter({ subsets: ['latin'] });
 const montserrat = Montserrat({ subsets: ['latin'] });
 const lexend = Lexend({ subsets: ['latin'], variable: '--font-lexend' });
 

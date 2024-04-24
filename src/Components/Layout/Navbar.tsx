@@ -6,9 +6,12 @@ import Link from 'next/link';
 import { RxCross2 } from 'react-icons/rx';
 import { CiSearch } from 'react-icons/ci';
 import { MdOutlineTravelExplore } from 'react-icons/md';
+import { PiMagicWand } from 'react-icons/pi';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
   const [showOptions, setShowOptions] = useState<boolean>(false);
+  const Router = useRouter();
   return (
     <nav className="py-6 w-screen  fixed top-0 mx-auto  bg-primary_darkest z-40">
       <div className="container flex justify-between items-center">
@@ -63,10 +66,17 @@ const Navbar = () => {
                 About
               </Link>
             </li>
-            <li className="hover:text-secondary_light  l:w-auto w-full text-center bg-primary_dark  py-3  -ml-1 lg:bg-transparent">
-              <Link onClick={() => setShowOptions(false)} href="/publish">
-                Publish
-              </Link>
+            <li className="hover:text-secondary_light   l:w-auto w-full text-center bg-primary_dark  py-3  -ml-1 lg:bg-transparent">
+              <a
+                className="flex gap-2 items-center cursor-pointer"
+                onClick={() => {
+                  setShowOptions(false);
+                  Router.push(`/nft/${Math.floor(Math.random() * 17)}`);
+                }}
+              >
+                <PiMagicWand className="inline" />
+                Magic
+              </a>
             </li>
             <li className=" bg-secondary justify-center hover:bg-terenary px-8 py-3 lg:py-2 text-primary_dark -ml-1   font-medium  l:w-auto w-full text-center">
               <Link
