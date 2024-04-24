@@ -6,6 +6,8 @@
 
 ### This is the official github repo for [Musi.nft](https://musi-nft.vercel.app) Click to visit.
 
+#### **Protip:** Click the `Magic` Button to hear randomg musics!
+
 ## Developed By
 
 ### **HRM Rafsan Amin** | Notre Dame College | 12505033
@@ -13,7 +15,7 @@
 - Email: rafsanamin2020@gmail.com
 - Website: https://rafsanamin.epizy.com
 
-### Stack Used
+## Stack Used
 
 - Next.js 14 | React.js 18
 - Tailwind CSS 3.0
