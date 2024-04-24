@@ -1,13 +1,10 @@
+'use client';
 import AudioPlayer from '@/Components/AudioPlayer';
 import PayOpt from '@/Components/PayOpt';
 import authors from '@/db/authors';
 import tracks from '@/db/tracks';
 import Link from 'next/link';
 import { BiDownload } from 'react-icons/bi';
-
-export async function generateStaticParams() {
-  return [...new Array(17)].map((s, index) => index);
-}
 
 const Page = ({ params }: { params: { index: number } }) => {
   const trackData = tracks[params.index];
